@@ -168,7 +168,7 @@ export default class TaskTable extends Component {
     if (this.state.taskArray == null) {
       return (
         <div>
-          Brak pobranych taksów
+          No task add yet.
           <br />
           <AddTaskForm
             editTask={this.hadleChange}
