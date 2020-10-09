@@ -1,0 +1,47 @@
+.add-form-container{
+    position: absolute;
+    left:0%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #494430;;
+    overflow: hidden;
+    transition: height 2s, width 2s;
+    display:flex;
+    flex-shrink: 0;
+    border: 2px black solid;
+    border-radius: 5px;
+  
+   
+  }
+  .add-Task-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width:60px;
+    min-width: 60px;
+  
+    
+   
+  }
+  .add-form-container:hover {
+    width: 460px;
+    height: 120px;
+  }
+  form{
+    width: 400px;
+    height: 200px;
+    
+    
+    div{
+      display: flex;
+      justify-content: space-between;
+      padding:5px;
+    }
+    .add-input-title{
+      input{
+        width: 300px;
+      }
+    }
+  }

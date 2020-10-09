@@ -1,0 +1,61 @@
+.table-container {
+    background-color: #efedea;
+    padding: 10px;
+    table {
+      width: 100%;
+      background: white;
+      text-align: left;
+      border-collapse: collapse;
+      thead {
+        tr {
+          border: 1px solid #494430;
+        }
+        th {
+          background-color: #494430;
+          color: white;
+          padding: 10px;
+          button{
+            border:none;
+            background-color: transparent;
+            color: wheat;
+            :hover{
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          border: 1px solid rgb(229, 229, 229);
+          img {
+            padding: 5px;
+            visibility: hidden;
+          }
+          td {
+            padding: 10px;
+          }
+        }
+        tr:hover {
+          cursor: pointer;
+          td {
+            img {
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .task-title {
+    width: 65%;
+  }
+  .task-priority {
+    width: 15%;
+  }
+  .task-done {
+    width: 12%;
+  }
+  .task-delete {
+    width: 10%;
+  }
