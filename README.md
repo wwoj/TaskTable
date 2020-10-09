@@ -22,18 +22,17 @@ Project is created with:
 
 ## Setup
 To run the project  system must have installed node + npm.
-To run this project, install it locally using npm:
 ```
 $ git clone https://github.com/wwoj/TaskTable.git
 $ npm install
 $ npm start
 ```
 
+To run project online visit: 
+https://wwoj.github.io/TaskTable/
+
 ## Status
 Project is:  finished.
-
-.
-
 
 ## Contact
 Created by @Wojciech Wojcik - feel free to contact me!
