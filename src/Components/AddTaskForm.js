@@ -45,7 +45,9 @@ const AddTaskForm = (props) => {
         />
           <label for={"statusCheckBox"}></label>
         </div>
+        <div className="submit-conainer">
         <input type="submit" onClick={props.clearInputs} />
+        </div>
       </form>
     </div>
   );

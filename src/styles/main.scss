@@ -19,3 +19,19 @@
 @import '../styles/navStyle.scss';
 @import '../styles/checkBox.scss';
 @import '../styles/addFormStyle.scss';
+
+@media only screen and (max-width: 600px) {
+  .main-conatainer {
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: white;
+    img {
+      width: 40%;
+      padding: 30px;
+    }
+    color:#8c8c8c;
+    font-weight: 600;
+  }
+}
