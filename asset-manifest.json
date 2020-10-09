@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/TaskTable/static/css/main.f947b1ed.chunk.css",
+    "main.css": "/TaskTable/static/css/main.c6aace85.chunk.css",
     "main.js": "/TaskTable/static/js/main.ce44c6c0.chunk.js",
     "main.js.map": "/TaskTable/static/js/main.ce44c6c0.chunk.js.map",
     "runtime-main.js": "/TaskTable/static/js/runtime-main.44f07f26.js",
@@ -8,15 +8,15 @@
     "static/js/2.3666db9f.chunk.js": "/TaskTable/static/js/2.3666db9f.chunk.js",
     "static/js/2.3666db9f.chunk.js.map": "/TaskTable/static/js/2.3666db9f.chunk.js.map",
     "index.html": "/TaskTable/index.html",
-    "precache-manifest.ab8dc83f08c92fdbbcb51fd604c813f5.js": "/TaskTable/precache-manifest.ab8dc83f08c92fdbbcb51fd604c813f5.js",
+    "precache-manifest.4af45ed98a1c64c7a08506122292d729.js": "/TaskTable/precache-manifest.4af45ed98a1c64c7a08506122292d729.js",
     "service-worker.js": "/TaskTable/service-worker.js",
-    "static/css/main.f947b1ed.chunk.css.map": "/TaskTable/static/css/main.f947b1ed.chunk.css.map",
+    "static/css/main.c6aace85.chunk.css.map": "/TaskTable/static/css/main.c6aace85.chunk.css.map",
     "static/js/2.3666db9f.chunk.js.LICENSE.txt": "/TaskTable/static/js/2.3666db9f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.44f07f26.js",
     "static/js/2.3666db9f.chunk.js",
-    "static/css/main.f947b1ed.chunk.css",
+    "static/css/main.c6aace85.chunk.css",
     "static/js/main.ce44c6c0.chunk.js"
   ]
 }
