@@ -19,6 +19,7 @@ input[type=checkbox]:checked {
     vertical-align: bottom;
     color: transparent;
     transition: .2s;
+    background-color: white;
   }
   input[type=checkbox] + label:active:before {
     transform: scale(0);

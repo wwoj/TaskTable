@@ -41,7 +41,9 @@ const AddTaskForm = (props) => {
           name="taskStatus"
           onChange={props.editStatus}
           checked={props.status}
+          id="statusCheckBox"
         />
+          <label for={"statusCheckBox"}></label>
         </div>
         <input type="submit" onClick={props.clearInputs} />
       </form>
