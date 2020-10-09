@@ -5,7 +5,6 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Status](#status)
-* [Inspiration](#inspiration)
 * [Contact](#contact)
 ## General info
 The purpose of this project was to create UI list that will show a TODO list. Each column of to do list is sortable ascending and descending.
