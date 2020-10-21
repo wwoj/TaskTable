@@ -4,6 +4,8 @@ import { getLocalData, saveLocalData } from "../Services/lsTaskService";
 import TableNav from "./TableNav";
 import AddTaskForm from "./AddTaskForm";
 import Thead from "./TaskTableHead";
+import Popup from './Popup';
+import OpenButton from './OpenForm';
 import {
   compareUpName,
   compareDownName,
@@ -29,11 +31,15 @@ export default class TaskTable extends Component {
       sortedTitleID: 0,
       sortedPriorityID: 0,
       sortedStatusID: 0,
+      visibilityPopup:false,
+      popupStyle:{},
+      taskAdded:false
     };
   }
   componentDidMount() {
     this.setState({ taskArray: getLocalData() });
   }
+  
   hadleChange = (event) => {
     let name = event.target.name;
     let val = event.target.value;
@@ -73,8 +79,13 @@ export default class TaskTable extends Component {
       tempArray.push(newTask);
       this.setState({ taskArray: tempArray });
       saveLocalData(tempArray);
+      this.clearInput();
+      this.hideAddForm();
+      this.setState({taskAdded:true});
     }
-    this.clearInput();
+    // this.clearInput();
+    // this.hideAddForm();
+    // this.setState({taskAdded:true});
   };
 
   addTask = () => {
@@ -153,8 +164,25 @@ export default class TaskTable extends Component {
     this.setState({ sortedStatusID: 0 });
   };
 
+  showAddForm = ()=>{
+    console.log("Widocznosc:",this.state.visibilityPopup)
+    
+    this.setState({visibilityPopup:true});
+  }
+
+  hideAddForm = ()=>{
+    console.log("Widocznosc:",this.state.visibilityPopup)
+  
+    this.setState({visibilityPopup:false});
+  }
   render() {
     // Get current posts
+    if(this.state.taskAdded)
+    {
+      setTimeout(() => {
+        this.setState({taskAdded:false})
+      }, 2000);
+    }
     var currentPosts;
     const indexOfLastPost = this.state.currentPage * this.state.postsPerPage;
     const indexOfFirstPost = indexOfLastPost - this.state.postsPerPage;
@@ -213,16 +241,33 @@ export default class TaskTable extends Component {
             lastTask={indexOfLastPost}
             totalTasks={this.state.taskArray.length}
           />
-          <AddTaskForm
+          {this.state.visibilityPopup && (<div>asdsad <button>asd</button><AddTaskForm
             editTask={this.hadleChange}
             editStatus={this.hadleChangeCheckBox}
             clearInputs={this.AddTaskToList}
             title={this.state.taskTitle}
             priority={this.state.taskPriority}
             status={this.state.taskStatus}
+            popupStatus={this.state.visibilityPopup}
+            showFormAction={this.showAddForm}
+            hideFormAction={this.hideAddForm}
+            style={this.state.popupStyle}
           />
+          </div>)}
+           
+         <OpenButton
+          popupStatus={this.state.visibilityPopup}
+          showFormAction={this.showAddForm}
+          hideFormAction={this.hideAddForm}
+          showForm={this.showAddForm}
+          hideForm={this.hideAddForm}
+          style={this.state.popupStyle}
+         />
+         {this.state.taskAdded &&(<div className = "confirm-bar">Task added to the list!!</div>)}
         </div>
       );
     }
   }
 }
+
+
